@@ -1,0 +1,74 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+      
+</head>
+<body>
+    <div class="topnav">
+        <a href="../create">CREATE</a>
+        <a href="../result">All RESULT</a>
+        <a href="../result">RESULT</a>
+      </div><br><br>
+     
+<form method="post" class="Srbtn" >
+    {% csrf_token %}
+
+    <div>{{min}}</div><br>
+    Roll No <input  type="text" name="input" placeholder="Enter Your Roll No" required >
+    <button type="submit" name="btnxyz"   value="buttonvalue">Search</button><br>
+</form>
+
+<table align="center" width="500px" border="1px"><br><br>
+  <tr>
+    <th>
+      Roll no
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      marks
+    </th>
+    <th>
+      result
+    </th>
+    <th></th>
+    <th></th>
+   
+  </tr>
+{% for qs in queryset %}
+
+<tr>
+  <td>
+    {{ qs.roll_no}}
+  </td>
+  <td>
+   <a href="../details?r={{ qs.roll_no}}"> {{ qs.name}} </a>
+  </td>
+  <td>
+    {{ qs.marks}}
+  </td>
+  <td>
+    {{ qs.result}}
+  </td>
+
+  <td>
+    <a href="../delete?r={{ qs.roll_no}}">
+    Delete
+    </a>
+  </td>
+  <td>
+     <a href="../edit?rx={ qs.roll_no}}">Edit</a>
+  </td>
+
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

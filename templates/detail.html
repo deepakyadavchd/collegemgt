@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+        
+</head>
+<body>
+    <div class="topnav">
+        <a href="../create">CREATE</a>
+        <a href="../result">All RESULT</a>
+        <a href="../result">RESULT</a>
+      </div><br><br> 
+
+<table align="center" width="500px" border="1px"><br><br>
+  <tr>
+    <th>
+      Roll no
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      marks
+    </th>
+    <th>
+      result
+    </th>
+   
+  </tr>
+{% for qs in queryset %}
+
+<tr>
+  <td>
+    {{ qs.roll_no}}
+  </td>
+  <td>
+   <a href="../details"> {{ qs.name}} </a>
+  </td>
+  <td>
+    {{ qs.marks}}
+  </td>
+  <td>
+    {{ qs.result}}
+  </td>
+
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+{% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head> 
+
+<body>
+  <div class="topnav">
+    <a href="../create">CREATE</a>
+    <a href="../result">All RESULT</a>
+    <a href="../result">RESULT</a>
+  </div><br><br>
+
+  {% block body123 %}
+
+  {% endblock %}  
+
+<form method="post"  id="formid"><br>
+{% csrf_token %}
+
+    <div id="alert"><div >{{error}}</div><div >{{errorx}}</div><div >{{errorv}}</div>
+    <div >{{error1}}</div><div >{{errorxz}}</div></div><br>
+    <div>Roll No <input type="text" placeholder="Enter Roll No" name="rbtn"></div><br>
+    <div> Name <input type="text" placeholder="Enter Name" name="nbtn"></div><br>
+    <div> Marks <input type="text" placeholder="Enter Marks" name="mbtn"></div><br>
+    <div>Result <select name="rst" id="rs"><br>
+        <option value="Pass" >Pass</option>
+        <option  value="Fail" >Fail</option>
+    </select></div><br><br>
+    <div><button type="submit" value="btnvalue" name="crtbtn"> Create </button></div>
+    <div id="msssg">{{msg}}</div><br>
+</form>
+</body>
+</html> 

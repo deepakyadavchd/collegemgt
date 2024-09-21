@@ -1,0 +1,87 @@
+
+
+
+
+
+.topnav {
+    width: 25%;
+    margin: 30px auto;
+    }
+    
+  
+  
+  .topnav a {
+    float: left;
+     border: solid;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color:darkcyan;
+  }
+  
+  .topnav a:hover {
+    background-color:grey;
+    color: black;
+  }
+  
+  .topnav a.active {
+    color: white;
+  }
+  
+  #formid{
+    width: 65%;
+    border: solid;
+    margin-left: 6cm;
+    margin-top:40px ;
+    border-radius: 5px;
+    text-align: center;
+    font-size: x-large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+  
+  }
+  
+  .Srbtn{
+
+
+    text-align: center;
+    font-size: x-large;
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+  
+  }
+
+
+
+
+
+  button{
+    font-size:large;
+    text-align: right;
+  }
+  
+  input{
+    text-align: center;
+    border: solid;
+    font-size:large;
+  
+  }
+  
+  select{
+    font-size:large;
+    font-weight: 250;
+  
+  }
+  
+  #msssg{
+
+    color: green;
+  }
+
+
+  #alert{
+
+    color: red;
+  }
